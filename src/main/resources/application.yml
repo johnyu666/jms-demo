@@ -1,0 +1,10 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: true #需要开启连接池功能，否则连接数量会无限增长
+      max-connections: 5
+      idle-timeout: 30s
+  jms:
+    pub-sub-domain: false # false是默认值，表示使用queue,否则表示的是topic
